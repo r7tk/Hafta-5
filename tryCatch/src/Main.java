@@ -21,13 +21,15 @@ public class Main {
         //System.out.println(arrayList);
 
         Scanner scanner = new Scanner(System.in);
-        while (true){
+        while (true) {
             System.out.println("Lütfen indis giriniz");
             int indeks = scanner.nextInt();
             try {
                 System.out.println(arrayList.get(indeks));
-            }catch (IndexOutOfBoundsException e){
+            } catch (IndexOutOfBoundsException e) {
                 System.out.println("Girdiğiniz veriler indeks kapasitesini aşıyor");
+                System.out.println(e.getMessage());
+                System.out.println(e.toString());
             }
         }
     }
